@@ -40,7 +40,7 @@ class InstagramBot:
             time.sleep(4)
             for i in range(1,3):
                 driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-                time.sleep(4)
+                time.sleep(2)
             hrefs_in_view = driver.find_elements_by_tag_name('a')
             pic_hrefs = [elem.get_attribute('href') for elem in hrefs_in_view]
             pic_hrefs = [elem for elem in pic_hrefs if 'com/p/' in elem]
@@ -59,13 +59,13 @@ class InstagramBot:
                     driver.find_element_by_xpath("//button[text()='Follow']").click()
                     follow_count +=1
                     print("Followed : ",follow_count)
-                    time.sleep(18)
+                    time.sleep(10)
                 except Exception as e:
-                    time.sleep(18)
+                    time.sleep(2)
 if __name__ == "__main__":
 
     username = "azhad.ghufran"
-    password = "Dabkdi@126814"
+    password = "password"
 
     ig = InstagramBot(username, password)
     ig.login()

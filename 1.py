@@ -1,5 +1,5 @@
 from instapy import InstaPy
-session = InstaPy(username="azhad.ghufran", password="Dabkdi@126814",headless_browser=False)
+session = InstaPy(username="username", password="pass",headless_browser=False)
 session.login()
 
 #settings
